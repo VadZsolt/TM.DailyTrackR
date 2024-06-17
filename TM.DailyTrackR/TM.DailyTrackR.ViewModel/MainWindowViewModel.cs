@@ -7,7 +7,8 @@
   {
     public MainWindowViewModel()
     {
-            LogicHelper.Instance.ExampleController.GetDataExample();
+            //LogicHelper.Instance.ExampleController.GetDataExample();
+            LogicHelper.Instance.ExampleController.InsertData("Homework");
     }
   }
 }

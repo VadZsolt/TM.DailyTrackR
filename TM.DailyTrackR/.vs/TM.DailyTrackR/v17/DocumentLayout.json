@@ -34,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -43,18 +43,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "App.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\TM.DailyTrackR\\TM.DailyTrackR\\TM.DailyTrackR\\App.xaml.cs",
-              "RelativeDocumentMoniker": "TM.DailyTrackR\\App.xaml.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\TM.DailyTrackR\\TM.DailyTrackR\\TM.DailyTrackR\\App.xaml.cs",
-              "RelativeToolTip": "TM.DailyTrackR\\App.xaml.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAuwAYAAAAgAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-17T05:27:20.482Z"
             },
             {
               "$type": "Document",
@@ -88,10 +76,22 @@
               "RelativeDocumentMoniker": "TM.DailyTrackR.Logic\\ExampleController.cs",
               "ToolTip": "C:\\Users\\User\\source\\repos\\TM.DailyTrackR\\TM.DailyTrackR\\TM.DailyTrackR.Logic\\ExampleController.cs",
               "RelativeToolTip": "TM.DailyTrackR.Logic\\ExampleController.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAxwA8AAABOAAAA",
+              "ViewState": "AQIAACoAAAAAAAAAAAAAADcAAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-14T08:52:43.933Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\TM.DailyTrackR\\TM.DailyTrackR\\TM.DailyTrackR\\App.xaml.cs",
+              "RelativeDocumentMoniker": "TM.DailyTrackR\\App.xaml.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\TM.DailyTrackR\\TM.DailyTrackR\\TM.DailyTrackR\\App.xaml.cs",
+              "RelativeToolTip": "TM.DailyTrackR\\App.xaml.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAuwAYAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-17T05:27:20.482Z"
             },
             {
               "$type": "Document",
@@ -110,11 +110,12 @@
               "Title": "MainWindowViewModel.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\TM.DailyTrackR\\TM.DailyTrackR\\TM.DailyTrackR.ViewModel\\MainWindowViewModel.cs",
               "RelativeDocumentMoniker": "TM.DailyTrackR.ViewModel\\MainWindowViewModel.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\TM.DailyTrackR\\TM.DailyTrackR\\TM.DailyTrackR.ViewModel\\MainWindowViewModel.cs",
-              "RelativeToolTip": "TM.DailyTrackR.ViewModel\\MainWindowViewModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAMAAAA",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\TM.DailyTrackR\\TM.DailyTrackR\\TM.DailyTrackR.ViewModel\\MainWindowViewModel.cs*",
+              "RelativeToolTip": "TM.DailyTrackR.ViewModel\\MainWindowViewModel.cs*",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAABKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T08:52:28.39Z"
+              "WhenOpened": "2024-06-14T08:52:28.39Z",
+              "EditorCaption": ""
             }
           ]
         },

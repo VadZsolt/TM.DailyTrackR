@@ -28,3 +28,4 @@ C:\Users\User\source\repos\TM.DailyTrackR\TM.DailyTrackR\TM.DailyTrackR.Logic\ob
 C:\Users\User\source\repos\TM.DailyTrackR\TM.DailyTrackR\TM.DailyTrackR.Logic\obj\Debug\net8.0-windows\refint\TM.DailyTrackR.Logic.dll
 C:\Users\User\source\repos\TM.DailyTrackR\TM.DailyTrackR\TM.DailyTrackR.Logic\obj\Debug\net8.0-windows\TM.DailyTrackR.Logic.pdb
 C:\Users\User\source\repos\TM.DailyTrackR\TM.DailyTrackR\TM.DailyTrackR.Logic\obj\Debug\net8.0-windows\ref\TM.DailyTrackR.Logic.dll
+C:\Users\User\source\repos\TM.DailyTrackR\TM.DailyTrackR\TM.DailyTrackR.Logic\obj\Debug\net8.0-windows\TM.DailyTrackR.Logic.sourcelink.json

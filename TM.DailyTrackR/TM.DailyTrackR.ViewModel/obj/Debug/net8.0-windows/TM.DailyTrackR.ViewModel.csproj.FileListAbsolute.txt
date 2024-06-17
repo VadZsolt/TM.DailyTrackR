@@ -36,3 +36,4 @@ C:\Users\User\source\repos\TM.DailyTrackR\TM.DailyTrackR\TM.DailyTrackR.ViewMode
 C:\Users\User\source\repos\TM.DailyTrackR\TM.DailyTrackR\TM.DailyTrackR.ViewModel\obj\Debug\net8.0-windows\refint\TM.DailyTrackR.ViewModel.dll
 C:\Users\User\source\repos\TM.DailyTrackR\TM.DailyTrackR\TM.DailyTrackR.ViewModel\obj\Debug\net8.0-windows\TM.DailyTrackR.ViewModel.pdb
 C:\Users\User\source\repos\TM.DailyTrackR\TM.DailyTrackR\TM.DailyTrackR.ViewModel\obj\Debug\net8.0-windows\ref\TM.DailyTrackR.ViewModel.dll
+C:\Users\User\source\repos\TM.DailyTrackR\TM.DailyTrackR\TM.DailyTrackR.ViewModel\obj\Debug\net8.0-windows\TM.DailyTrackR.ViewModel.sourcelink.json

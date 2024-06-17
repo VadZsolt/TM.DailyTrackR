@@ -40,5 +40,28 @@
         }
       return 0;
     }
+    public int InsertData(string projectName)
+        {
+            string procedureName = "tm.InsertNewProject";
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    using (SqlCommand command = new SqlCommand(procedureName, connection))
+                    {
+                        command.CommandType = CommandType.StoredProcedure;
+                        command.Parameters.AddWithValue("@ProjectName", projectName);
+                        connection.Open();
+                        int rowsAffected = command.ExecuteNonQuery();
+                        return rowsAffected;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("An error occurred: " + ex.Message);
+                    return -1;
+                }
+            }
+        }
   }
 }

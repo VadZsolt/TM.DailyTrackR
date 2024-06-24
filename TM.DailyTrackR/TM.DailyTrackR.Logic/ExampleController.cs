@@ -63,5 +63,64 @@
                 }
             }
         }
-  }
+        public int UpdateData(int id, string desc)
+        {
+            string procedureName = "TM.UpdateProjectType";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    using (SqlCommand command = new SqlCommand(procedureName, connection))
+                    {
+                        command.CommandType = System.Data.CommandType.StoredProcedure;
+                        command.Parameters.AddWithValue("@ProjectId", id);
+                        command.Parameters.AddWithValue("@ProjectDesc", desc);
+
+                        connection.Open();
+                        //https://www.aspsnippets.com/Articles/4174/Update-data-into-Database-using-Stored-Procedure-in-Windows-Forms/
+                        int rowsAffected = command.ExecuteNonQuery();
+
+                        return rowsAffected;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("An error occurred: " + ex.Message);
+
+                }
+            }
+
+            return 0;
+        }
+
+
+        public int DeleteData(int id)
+        {
+            string procedureName = "TM.DeleteProjectType";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    using (SqlCommand command = new SqlCommand(procedureName, connection))
+                    {
+                        command.CommandType = System.Data.CommandType.StoredProcedure;
+                        command.Parameters.AddWithValue("@ProjectId", id);
+                        connection.Open();
+                        int rowsAffected = command.ExecuteNonQuery();
+
+                        return rowsAffected;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("An error occurred: " + ex.Message);
+                }
+            }
+
+            return 0;
+        }
+        
+    }
 }

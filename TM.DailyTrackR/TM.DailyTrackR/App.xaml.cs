@@ -4,17 +4,12 @@
   using TM.DailyTrackR.View;
   using TM.DailyTrackR.ViewModel;
 
-  public partial class App : Application
-  {
-    protected override void OnStartup(StartupEventArgs e)
+    public partial class App : Application
     {
-      base.OnStartup(e);
-
-      //Register View
-
-      MainWindow window = new();
-      window.DataContext = new MainWindowViewModel();
-      window.ShowDialog();
+        private void Application_Startup(object sender, StartupEventArgs e)
+        {
+            LoginWindow loginWindow = new LoginWindow();
+            loginWindow.Show();
+        }
     }
-  }
 }

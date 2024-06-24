@@ -8,7 +8,8 @@
     public MainWindowViewModel()
     {
             //LogicHelper.Instance.ExampleController.GetDataExample();
-            LogicHelper.Instance.ExampleController.InsertData("Homework");
+            //LogicHelper.Instance.ExampleController.InsertData("Homework1");
+            //LogicHelper.Instance.ExampleController.UpdateData(6, "new one");
     }
   }
 }

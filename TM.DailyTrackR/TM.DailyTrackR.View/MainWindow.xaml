@@ -4,10 +4,97 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TM.DailyTrackR.View"
+        xmlns:converters="clr-namespace:TM.DailyTrackR.DataType;assembly=TM.DailyTrackR.DataType"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Title="TM Daily TrackR" Height="450" Width="800">
-  <Grid>
+        Title="TM Daily TrackR" Height="420" Width="800"
+        ResizeMode="CanResize">
 
-  </Grid>
+    <Window.Resources>
+        <converters:EnumConverts x:Key="EnumConverts" />
+        <Style x:Key="servus" TargetType="Button">
+            <Setter Property="Background" Value="Turquoise" />
+            <Setter Property="Height" Value="30" />
+            <Setter Property="Width" Value="50" />
+            <Setter Property="Foreground" Value="Black" />
+            <Setter Property="Margin" Value="30" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="FontSize" Value="20" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="DeepSkyBlue" BorderBrush="Bisque" BorderThickness="5" CornerRadius="10">
+                            <TextBlock Text="Click" VerticalAlignment="Center" Margin="3" HorizontalAlignment="Center" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="0">
+            <Calendar x:Name="Calendar" SelectedDatesChanged="Calendar_SelectedDatesChanged"/>
+        </StackPanel>
+
+        <TabControl Grid.Column="1">
+            <!-- DailyWork Tab -->
+            <TabItem Header="DailyWork">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <Label x:Name="DateLabel1" Content="Selected Date: " Margin="10" Grid.Row="0"/>
+                    <DataGrid x:Name="DailyWorkDataGrid" AutoGenerateColumns="False" Margin="10" HorizontalAlignment="Stretch" Grid.Row="1" MouseRightButtonUp="DailyWorkDataGrid_MouseRightButtonUp">
+                        <DataGrid.ContextMenu>
+                            <ContextMenu>
+                                <MenuItem Header="Create" Click="CreateMenuItem_Click" />
+                                <MenuItem Header="Delete" Click="DeleteMenuItem_Click" />
+                            </ContextMenu>
+                        </DataGrid.ContextMenu>
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="No." Binding="{Binding NO}" IsReadOnly="True" />
+                            <DataGridTextColumn Header="Project type" Binding="{Binding ProjectType}" />
+                            <DataGridTextColumn Header="Task type" Binding="{Binding TaskType, Converter={StaticResource EnumConverts}}" />
+                            <DataGridTextColumn Header="Description" Binding="{Binding Description}" />
+                            <DataGridTextColumn Header="Status" Binding="{Binding Status, Converter={StaticResource EnumConverts}}" />
+                            <DataGridTextColumn Header="Id" Binding="{Binding id}" Visibility="Hidden" IsReadOnly="False" />
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <Button Content="Add Activity" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="10" Grid.Row="2"/>
+                </Grid>
+            </TabItem>
+
+            <!-- Overview Tab -->
+            <TabItem Header="Overview">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <Label x:Name="DateLabel2" Content="Selected Date: " Margin="10" Grid.Row="0"/>
+                    <DataGrid x:Name="OverviewDataGrid" AutoGenerateColumns="False" Margin="10" IsReadOnly="True" Grid.Row="1">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="No." Binding="{Binding NO}" IsReadOnly="True" />
+                            <DataGridTextColumn Header="Project type" Binding="{Binding ProjectType}" IsReadOnly="True" />
+                            <DataGridTextColumn Header="Description" Binding="{Binding Description}" IsReadOnly="True" />
+                            <DataGridTextColumn Header="Status" Binding="{Binding Status, Converter={StaticResource EnumConverts}}" IsReadOnly="True" />
+                            <DataGridTextColumn Header="User" Binding="{Binding User}" IsReadOnly="True" />
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <Button Content="Export Data" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="10" Grid.Row="2"/>
+                    <!-- Loading indicator, initially collapsed -->
+                    <TextBlock x:Name="LoadingIndicator" Text="Loading..." HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Collapsed"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
 </Window>

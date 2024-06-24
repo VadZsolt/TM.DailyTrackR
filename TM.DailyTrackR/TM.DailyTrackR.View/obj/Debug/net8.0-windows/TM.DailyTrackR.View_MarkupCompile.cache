@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 
-11407045341
+3-1714983260
 
-2-942910337
+4-96986467
 205-73356671
-MainWindow.xaml;
+CreateWindow.xaml;LoginWindow.xaml;MainWindow.xaml;
 
 False
 

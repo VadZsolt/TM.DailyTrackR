@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\User\\source\\repos\\TM.DailyTrackR\\TM.DailyTrackR\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{49140A3A-CB16-49B4-9B50-EDDB62394D3E}|TM.DailyTrackR.View\\TM.DailyTrackR.View.csproj|c:\\users\\user\\source\\repos\\tm.dailytrackr\\tm.dailytrackr\\tm.dailytrackr.view\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{49140A3A-CB16-49B4-9B50-EDDB62394D3E}|TM.DailyTrackR.View\\TM.DailyTrackR.View.csproj|solutionrelative:tm.dailytrackr.view\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{49140A3A-CB16-49B4-9B50-EDDB62394D3E}|TM.DailyTrackR.View\\TM.DailyTrackR.View.csproj|c:\\users\\user\\source\\repos\\tm.dailytrackr\\tm.dailytrackr\\tm.dailytrackr.view\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{49140A3A-CB16-49B4-9B50-EDDB62394D3E}|TM.DailyTrackR.View\\TM.DailyTrackR.View.csproj|solutionrelative:tm.dailytrackr.view\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -11,32 +15,8 @@
       "RelativeMoniker": "D:0:0:{49256B95-739A-4321-8BD2-EAC46A766CC4}|TM.DailyTrackR.DataType\\TM.DailyTrackR.DataType.csproj|solutionrelative:tm.dailytrackr.datatype\\dailyworkitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{49140A3A-CB16-49B4-9B50-EDDB62394D3E}|TM.DailyTrackR.View\\TM.DailyTrackR.View.csproj|c:\\users\\user\\source\\repos\\tm.dailytrackr\\tm.dailytrackr\\tm.dailytrackr.view\\createwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{49140A3A-CB16-49B4-9B50-EDDB62394D3E}|TM.DailyTrackR.View\\TM.DailyTrackR.View.csproj|solutionrelative:tm.dailytrackr.view\\createwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{49140A3A-CB16-49B4-9B50-EDDB62394D3E}|TM.DailyTrackR.View\\TM.DailyTrackR.View.csproj|c:\\users\\user\\source\\repos\\tm.dailytrackr\\tm.dailytrackr\\tm.dailytrackr.view\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{49140A3A-CB16-49B4-9B50-EDDB62394D3E}|TM.DailyTrackR.View\\TM.DailyTrackR.View.csproj|solutionrelative:tm.dailytrackr.view\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{49140A3A-CB16-49B4-9B50-EDDB62394D3E}|TM.DailyTrackR.View\\TM.DailyTrackR.View.csproj|c:\\users\\user\\source\\repos\\tm.dailytrackr\\tm.dailytrackr\\tm.dailytrackr.view\\loginwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{49140A3A-CB16-49B4-9B50-EDDB62394D3E}|TM.DailyTrackR.View\\TM.DailyTrackR.View.csproj|solutionrelative:tm.dailytrackr.view\\loginwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{49140A3A-CB16-49B4-9B50-EDDB62394D3E}|TM.DailyTrackR.View\\TM.DailyTrackR.View.csproj|c:\\users\\user\\source\\repos\\tm.dailytrackr\\tm.dailytrackr\\tm.dailytrackr.view\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{49140A3A-CB16-49B4-9B50-EDDB62394D3E}|TM.DailyTrackR.View\\TM.DailyTrackR.View.csproj|solutionrelative:tm.dailytrackr.view\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{49256B95-739A-4321-8BD2-EAC46A766CC4}|TM.DailyTrackR.DataType\\TM.DailyTrackR.DataType.csproj|c:\\users\\user\\source\\repos\\tm.dailytrackr\\tm.dailytrackr\\tm.dailytrackr.datatype\\overviewitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{49256B95-739A-4321-8BD2-EAC46A766CC4}|TM.DailyTrackR.DataType\\TM.DailyTrackR.DataType.csproj|solutionrelative:tm.dailytrackr.datatype\\overviewitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{49256B95-739A-4321-8BD2-EAC46A766CC4}|TM.DailyTrackR.DataType\\TM.DailyTrackR.DataType.csproj|c:\\users\\user\\source\\repos\\tm.dailytrackr\\tm.dailytrackr\\tm.dailytrackr.datatype\\enumconverts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{49256B95-739A-4321-8BD2-EAC46A766CC4}|TM.DailyTrackR.DataType\\TM.DailyTrackR.DataType.csproj|solutionrelative:tm.dailytrackr.datatype\\enumconverts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{20A05D96-C401-4640-BE5B-7F2AF839E2F5}|TM.DailyTrackR.Logic\\TM.DailyTrackR.Logic.csproj|c:\\users\\user\\source\\repos\\tm.dailytrackr\\tm.dailytrackr\\tm.dailytrackr.logic\\examplecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{20A05D96-C401-4640-BE5B-7F2AF839E2F5}|TM.DailyTrackR.Logic\\TM.DailyTrackR.Logic.csproj|solutionrelative:tm.dailytrackr.logic\\examplecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -58,70 +38,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CreateWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\TM.DailyTrackR\\TM.DailyTrackR\\TM.DailyTrackR.View\\CreateWindow.xaml",
-              "RelativeDocumentMoniker": "TM.DailyTrackR.View\\CreateWindow.xaml",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\TM.DailyTrackR\\TM.DailyTrackR\\TM.DailyTrackR.View\\CreateWindow.xaml",
-              "RelativeToolTip": "TM.DailyTrackR.View\\CreateWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-06-24T13:29:39.558Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\TM.DailyTrackR\\TM.DailyTrackR\\TM.DailyTrackR.View\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "TM.DailyTrackR.View\\MainWindow.xaml.cs",
               "ToolTip": "C:\\Users\\User\\source\\repos\\TM.DailyTrackR\\TM.DailyTrackR\\TM.DailyTrackR.View\\MainWindow.xaml.cs",
               "RelativeToolTip": "TM.DailyTrackR.View\\MainWindow.xaml.cs",
-              "ViewState": "AQIAAIIAAAAAAAAAAAAQwI8AAABGAAAA",
+              "ViewState": "AQIAAMAAAAAAAAAAAADwv+QAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-23T16:35:44.969Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "EnumConverts.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\TM.DailyTrackR\\TM.DailyTrackR\\TM.DailyTrackR.DataType\\EnumConverts.cs",
-              "RelativeDocumentMoniker": "TM.DailyTrackR.DataType\\EnumConverts.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\TM.DailyTrackR\\TM.DailyTrackR\\TM.DailyTrackR.DataType\\EnumConverts.cs",
-              "RelativeToolTip": "TM.DailyTrackR.DataType\\EnumConverts.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-23T19:40:31.527Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\TM.DailyTrackR\\TM.DailyTrackR\\TM.DailyTrackR.View\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "TM.DailyTrackR.View\\MainWindow.xaml",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\TM.DailyTrackR\\TM.DailyTrackR\\TM.DailyTrackR.View\\MainWindow.xaml",
-              "RelativeToolTip": "TM.DailyTrackR.View\\MainWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-06-23T16:17:55.839Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "LoginWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\TM.DailyTrackR\\TM.DailyTrackR\\TM.DailyTrackR.View\\LoginWindow.xaml.cs",
-              "RelativeDocumentMoniker": "TM.DailyTrackR.View\\LoginWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\TM.DailyTrackR\\TM.DailyTrackR\\TM.DailyTrackR.View\\LoginWindow.xaml.cs",
-              "RelativeToolTip": "TM.DailyTrackR.View\\LoginWindow.xaml.cs",
-              "ViewState": "AQIAABQAAAAAAAAAAAAqwB8AAABBAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-24T10:20:18.053Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "DailyWorkItem.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\TM.DailyTrackR\\TM.DailyTrackR\\TM.DailyTrackR.DataType\\DailyWorkItem.cs",
               "RelativeDocumentMoniker": "TM.DailyTrackR.DataType\\DailyWorkItem.cs",
@@ -134,7 +64,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 3,
               "Title": "OverviewItem.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\TM.DailyTrackR\\TM.DailyTrackR\\TM.DailyTrackR.DataType\\OverviewItem.cs",
               "RelativeDocumentMoniker": "TM.DailyTrackR.DataType\\OverviewItem.cs",
@@ -142,32 +72,19 @@
               "RelativeToolTip": "TM.DailyTrackR.DataType\\OverviewItem.cs",
               "ViewState": "AQIAAAIAAAAAAAAAAAAqwA4AAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-23T17:24:17.489Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-23T17:24:17.489Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "LoginWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\TM.DailyTrackR\\TM.DailyTrackR\\TM.DailyTrackR.View\\LoginWindow.xaml",
-              "RelativeDocumentMoniker": "TM.DailyTrackR.View\\LoginWindow.xaml",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\TM.DailyTrackR\\TM.DailyTrackR\\TM.DailyTrackR.View\\LoginWindow.xaml",
-              "RelativeToolTip": "TM.DailyTrackR.View\\LoginWindow.xaml",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\TM.DailyTrackR\\TM.DailyTrackR\\TM.DailyTrackR.View\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "TM.DailyTrackR.View\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\TM.DailyTrackR\\TM.DailyTrackR\\TM.DailyTrackR.View\\MainWindow.xaml",
+              "RelativeToolTip": "TM.DailyTrackR.View\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-06-24T10:18:03.817Z",
+              "WhenOpened": "2024-06-23T16:17:55.839Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ExampleController.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\TM.DailyTrackR\\TM.DailyTrackR\\TM.DailyTrackR.Logic\\ExampleController.cs",
-              "RelativeDocumentMoniker": "TM.DailyTrackR.Logic\\ExampleController.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\TM.DailyTrackR\\TM.DailyTrackR\\TM.DailyTrackR.Logic\\ExampleController.cs",
-              "RelativeToolTip": "TM.DailyTrackR.Logic\\ExampleController.cs",
-              "ViewState": "AQIAAFgAAAAAAAAAAAAAAGwAAAAYAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T08:52:43.933Z"
             }
           ]
         },

@@ -8,12 +8,24 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="down1.jpg" />
+    <None Remove="download.png" />
+    <None Remove="plusicon.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Prism.Wpf" Version="8.1.97" />
   </ItemGroup>
   
   <ItemGroup>
     <ProjectReference Include="..\TM.DailyTrackR.Common\TM.DailyTrackR.Common.csproj" />
     <ProjectReference Include="..\TM.DailyTrackR.DataType\TM.DailyTrackR.DataType.csproj" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Resource Include="down1.jpg" />
+    <Resource Include="download.png" />
+    <Resource Include="plusicon.png" />
   </ItemGroup>
 
 </Project>

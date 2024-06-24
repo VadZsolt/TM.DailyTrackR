@@ -7,29 +7,11 @@
         xmlns:converters="clr-namespace:TM.DailyTrackR.DataType;assembly=TM.DailyTrackR.DataType"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Title="TM Daily TrackR" Height="420" Width="800"
+        Title="TM Daily TrackR" Height="600" Width="800"
         ResizeMode="CanResize">
 
     <Window.Resources>
         <converters:EnumConverts x:Key="EnumConverts" />
-        <Style x:Key="servus" TargetType="Button">
-            <Setter Property="Background" Value="Turquoise" />
-            <Setter Property="Height" Value="30" />
-            <Setter Property="Width" Value="50" />
-            <Setter Property="Foreground" Value="Black" />
-            <Setter Property="Margin" Value="30" />
-            <Setter Property="FontWeight" Value="Bold" />
-            <Setter Property="FontSize" Value="20" />
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="Button">
-                        <Border Background="DeepSkyBlue" BorderBrush="Bisque" BorderThickness="5" CornerRadius="10">
-                            <TextBlock Text="Click" VerticalAlignment="Center" Margin="3" HorizontalAlignment="Center" />
-                        </Border>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
     </Window.Resources>
 
     <Grid>
@@ -51,7 +33,7 @@
                         <RowDefinition Height="*" />
                     </Grid.RowDefinitions>
 
-                    <Label x:Name="DateLabel1" Content="Selected Date: " Margin="10" Grid.Row="0"/>
+                    <Label x:Name="DateLabel1" Content="Selected Date: " Margin="10" Grid.Row="0" Grid.Column="0"/>
                     <DataGrid x:Name="DailyWorkDataGrid" AutoGenerateColumns="False" Margin="10" HorizontalAlignment="Stretch" Grid.Row="1" MouseRightButtonUp="DailyWorkDataGrid_MouseRightButtonUp">
                         <DataGrid.ContextMenu>
                             <ContextMenu>
@@ -68,7 +50,9 @@
                             <DataGridTextColumn Header="Id" Binding="{Binding id}" Visibility="Hidden" IsReadOnly="False" />
                         </DataGrid.Columns>
                     </DataGrid>
-                    <Button Content="Add Activity" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="10" Grid.Row="2"/>
+                    <Button Click="CreateMenuItem_Click" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="10" Grid.Row="0" Grid.Column="1">
+                        <Image Source="/TM.DailyTrackR.View;component/plusicon.png" Width="20" Height="20"/>
+                    </Button>
                 </Grid>
             </TabItem>
 
@@ -78,6 +62,8 @@
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto" />
+                        <!-- New row for the export button and calendar -->
                     </Grid.RowDefinitions>
 
                     <Label x:Name="DateLabel2" Content="Selected Date: " Margin="10" Grid.Row="0"/>
@@ -90,7 +76,18 @@
                             <DataGridTextColumn Header="User" Binding="{Binding User}" IsReadOnly="True" />
                         </DataGrid.Columns>
                     </DataGrid>
-                    <Button Content="Export Data" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="10" Grid.Row="2"/>
+                    <Grid Grid.Row="2" Margin="10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Content="Select Date Range: " VerticalAlignment="Center" Grid.Column="0"/>
+                        <Calendar x:Name="DateRangeCalendar" SelectionMode="SingleRange" DisplayMode="Month" Margin="5" Grid.Column="1"/>
+                        <Button Click="ExportButton_Click" Width="30" Height="30" Grid.Column="2">
+                            <Image Source="/TM.DailyTrackR.View;component/down1.jpg"/>
+                        </Button>
+                    </Grid>
                     <!-- Loading indicator, initially collapsed -->
                     <TextBlock x:Name="LoadingIndicator" Text="Loading..." HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Collapsed"/>
                 </Grid>

@@ -7,11 +7,120 @@
         xmlns:converters="clr-namespace:TM.DailyTrackR.DataType;assembly=TM.DailyTrackR.DataType"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Title="TM Daily TrackR" Height="600" Width="800"
-        ResizeMode="CanResize">
-
+        Title="TM Daily TrackR" 
+        Icon="calendar.ico"
+        Height="500" 
+        Width="800"
+        ResizeMode="NoResize"
+        Background="PeachPuff"
+        KeyDown="Window_KeyDown">
+    <Window.InputBindings>
+        <KeyBinding Key="N" Modifiers="Control" Command="{Binding CreateMenuItemCommand}"/>
+        <KeyBinding Key="Delete" Command="{Binding DeleteDailyWorkItemCommand}"/>
+    </Window.InputBindings>
+    
     <Window.Resources>
         <converters:EnumConverts x:Key="EnumConverts" />
+        <Style x:Key="StyledLabel" TargetType="Label">
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="FontFamily" Value="Tahoma"/>
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="Foreground" Value="DeepSkyBlue"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Label">
+                        <TextBlock Text="{TemplateBinding Content}" TextDecorations="Underline"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="StyledButton" TargetType="Button">
+            <Setter Property="HorizontalAlignment" Value="Right"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="Width" Value="25"/>
+            <Setter Property="Height" Value="25"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Width" Value="30"/>
+                    <Setter Property="Height" Value="30"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="Button">
+                                <Border Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="5">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Width" Value="30"/>
+                                        <Setter Property="Height" Value="30"/>
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="StyledCalendar" TargetType="Calendar">
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="Width" Value="Auto"/>
+            <Setter Property="Height" Value="Auto"/>
+            <Setter Property="Background" Value="LightGray"/>
+            <Setter Property="BorderBrush" Value="LightBlue"/>
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="FontFamily" Value="Tahoma"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+        </Style>
+        <Style x:Key="StyledTabitem" TargetType="TabItem">
+            <Setter Property="FontFamily" Value="Tahoma"/>
+        </Style>
+        <Style x:Key="StyledDataGrid" TargetType="DataGrid">
+            <Setter Property="Background" Value="AliceBlue"/>
+            <Setter Property="AutoGenerateColumns" Value="False"/>
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="HorizontalAlignment" Value="Stretch"/>
+            <Setter Property="VerticalContentAlignment" Value="Stretch"/>
+            <Setter Property="RowStyle">
+                <Setter.Value>
+                    <Style TargetType="DataGridRow">
+                        <Setter Property="Background" Value="White"/>
+                        <Setter Property="Foreground" Value="Black"/>
+                        <Setter Property="FontFamily" Value="Tahoma"/>
+                        <Setter Property="FontSize" Value="12"/>
+                        <Setter Property="HorizontalAlignment" Value="Center"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter Property="Background" Value="LightBlue"/>
+                                <Setter Property="Foreground" Value="Black"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="LightGray"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="StyledGrid" TargetType="Grid">
+            <Setter Property="Background" Value="PowderBlue"/>
+        </Style>
+        <Style x:Key="DataGridColumnHeaderStyle" TargetType="DataGridColumnHeader">
+            <Setter Property="Background" Value="LightCoral"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontFamily" Value="Tahoma"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Stretch"/>
+        </Style>
     </Window.Resources>
 
     <Grid>
@@ -20,21 +129,26 @@
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
 
-        <StackPanel Grid.Column="0">
-            <Calendar x:Name="Calendar" SelectedDatesChanged="Calendar_SelectedDatesChanged"/>
+        <StackPanel Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Calendar x:Name="Calendar" SelectedDatesChanged="Calendar_SelectedDatesChanged" Style="{StaticResource StyledCalendar}"/>
         </StackPanel>
 
         <TabControl Grid.Column="1">
             <!-- DailyWork Tab -->
-            <TabItem Header="DailyWork">
-                <Grid>
+            <TabItem Header="DailyWork" Style="{StaticResource StyledTabitem}">
+                <Grid Style="{StaticResource StyledGrid}">
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="50" />
                         <RowDefinition Height="*" />
                     </Grid.RowDefinitions>
 
-                    <Label x:Name="DateLabel1" Content="Selected Date: " Margin="10" Grid.Row="0" Grid.Column="0"/>
-                    <DataGrid x:Name="DailyWorkDataGrid" AutoGenerateColumns="False" Margin="10" HorizontalAlignment="Stretch" Grid.Row="1" MouseRightButtonUp="DailyWorkDataGrid_MouseRightButtonUp">
+                    <Label x:Name="DateLabel1" Content="Selected Date: " Grid.Row="0" Grid.Column="0" Style="{StaticResource StyledLabel}"/>
+                    <Button Click="CreateMenuItem_Click" Grid.Row="0" Grid.Column="1" Style="{StaticResource StyledButton}">
+                        <Button.Background>
+                            <ImageBrush ImageSource="/TM.DailyTrackR.View;component/plusicon.png"/>
+                        </Button.Background>
+                    </Button>
+                    <DataGrid x:Name="DailyWorkDataGrid" Grid.Row="1" MouseRightButtonUp="DailyWorkDataGrid_MouseRightButtonUp" CellEditEnding="DailyWorkDataGrid_CellEditEnding" Style="{StaticResource StyledDataGrid}" ColumnHeaderStyle="{StaticResource DataGridColumnHeaderStyle}">
                         <DataGrid.ContextMenu>
                             <ContextMenu>
                                 <MenuItem Header="Create" Click="CreateMenuItem_Click" />
@@ -42,54 +156,56 @@
                             </ContextMenu>
                         </DataGrid.ContextMenu>
                         <DataGrid.Columns>
-                            <DataGridTextColumn Header="No." Binding="{Binding NO}" IsReadOnly="True" />
-                            <DataGridTextColumn Header="Project type" Binding="{Binding ProjectType}" />
-                            <DataGridTextColumn Header="Task type" Binding="{Binding TaskType, Converter={StaticResource EnumConverts}}" />
-                            <DataGridTextColumn Header="Description" Binding="{Binding Description}" />
-                            <DataGridTextColumn Header="Status" Binding="{Binding Status, Converter={StaticResource EnumConverts}}" />
-                            <DataGridTextColumn Header="Id" Binding="{Binding id}" Visibility="Hidden" IsReadOnly="False" />
+                            <DataGridTextColumn Header="No." Binding="{Binding NO}" IsReadOnly="True" Width="*"/>
+                            <DataGridTextColumn Header="Project type" Binding="{Binding ProjectType}" IsReadOnly="True" Width="*"/>
+                            <DataGridTextColumn Header="Task type" Binding="{Binding TaskType, Converter={StaticResource EnumConverts}}" IsReadOnly="True" Width="*"/>
+                            <DataGridTextColumn Header="Description" Binding="{Binding Description}" Width="*"/>
+                            <DataGridTextColumn Header="Status" Binding="{Binding Status, Converter={StaticResource EnumConverts}}" IsReadOnly="True" Width="*"/>
+                            <DataGridTextColumn Header="Id" Binding="{Binding id}" Visibility="Hidden" IsReadOnly="True" Width="*"/>
                         </DataGrid.Columns>
                     </DataGrid>
-                    <Button Click="CreateMenuItem_Click" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="10" Grid.Row="0" Grid.Column="1">
-                        <Image Source="/TM.DailyTrackR.View;component/plusicon.png" Width="20" Height="20"/>
-                    </Button>
                 </Grid>
             </TabItem>
 
             <!-- Overview Tab -->
-            <TabItem Header="Overview">
-                <Grid>
+            <TabItem x:Name="OverviewTab" Header="Overview" Style="{StaticResource StyledTabitem}">
+                <Grid Style="{StaticResource StyledGrid}">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="5*"/>
+                        <ColumnDefinition Width="94*"/>
+                    </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="*" />
                         <RowDefinition Height="Auto" />
-                        <!-- New row for the export button and calendar -->
                     </Grid.RowDefinitions>
 
-                    <Label x:Name="DateLabel2" Content="Selected Date: " Margin="10" Grid.Row="0"/>
-                    <DataGrid x:Name="OverviewDataGrid" AutoGenerateColumns="False" Margin="10" IsReadOnly="True" Grid.Row="1">
+                    <Label x:Name="DateLabel2" Content="Selected Date: " Grid.Row="0" Grid.ColumnSpan="2" Style="{StaticResource StyledLabel}"/>
+                    <DataGrid x:Name="OverviewDataGrid" IsReadOnly="True" Grid.Row="1" Style="{StaticResource StyledDataGrid}" Grid.ColumnSpan="2" ColumnHeaderStyle="{StaticResource DataGridColumnHeaderStyle}">
                         <DataGrid.Columns>
-                            <DataGridTextColumn Header="No." Binding="{Binding NO}" IsReadOnly="True" />
-                            <DataGridTextColumn Header="Project type" Binding="{Binding ProjectType}" IsReadOnly="True" />
-                            <DataGridTextColumn Header="Description" Binding="{Binding Description}" IsReadOnly="True" />
-                            <DataGridTextColumn Header="Status" Binding="{Binding Status, Converter={StaticResource EnumConverts}}" IsReadOnly="True" />
-                            <DataGridTextColumn Header="User" Binding="{Binding User}" IsReadOnly="True" />
+                            <DataGridTextColumn Header="No." Binding="{Binding NO}" IsReadOnly="True" Width="*"/>
+                            <DataGridTextColumn Header="Project type" Binding="{Binding ProjectType}" IsReadOnly="True" Width="*"/>
+                            <DataGridTextColumn Header="Description" Binding="{Binding Description}" IsReadOnly="True" Width="*"/>
+                            <DataGridTextColumn Header="Status" Binding="{Binding Status, Converter={StaticResource EnumConverts}}" IsReadOnly="True" Width="*"/>
+                            <DataGridTextColumn Header="User" Binding="{Binding User}" IsReadOnly="True" Width="*"/>
                         </DataGrid.Columns>
                     </DataGrid>
-                    <Grid Grid.Row="2" Margin="10">
+                    <Grid Grid.Row="2" Margin="10,10,10,10" Grid.ColumnSpan="2">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="Auto"/>
-                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
                             <ColumnDefinition Width="Auto"/>
                         </Grid.ColumnDefinitions>
-                        <Label Content="Select Date Range: " VerticalAlignment="Center" Grid.Column="0"/>
+                        <Label Content="Select Date Range: " Grid.Column="0" Style="{StaticResource StyledLabel}" VerticalAlignment="Center" />
                         <Calendar x:Name="DateRangeCalendar" SelectionMode="SingleRange" DisplayMode="Month" Margin="5" Grid.Column="1"/>
-                        <Button Click="ExportButton_Click" Width="30" Height="30" Grid.Column="2">
-                            <Image Source="/TM.DailyTrackR.View;component/down1.jpg"/>
+                        <Button Click="ExportButton_Click" Grid.Column="2" Style="{StaticResource StyledButton}" VerticalAlignment="Bottom" >
+                            <Button.Background>
+                                <ImageBrush ImageSource="/TM.DailyTrackR.View;component/download.png"/>
+                            </Button.Background>
                         </Button>
                     </Grid>
                     <!-- Loading indicator, initially collapsed -->
-                    <TextBlock x:Name="LoadingIndicator" Text="Loading..." HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Collapsed"/>
+                    <Image x:Name="LoadingIndicator" Source="/TM.DailyTrackR.View;component/load.png" HorizontalAlignment="Left" VerticalAlignment="Center" Visibility="Collapsed" Height="200" Width="200" Grid.Column="1" Margin="167,0,0,0"/>
                 </Grid>
             </TabItem>
         </TabControl>

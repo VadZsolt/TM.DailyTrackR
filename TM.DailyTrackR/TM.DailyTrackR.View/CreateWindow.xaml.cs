@@ -72,6 +72,11 @@ namespace TM.DailyTrackR.View
 
         private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
+            if (ProjectTypeComboBox.SelectedItem == null || TaskTypeComboBox.SelectedItem == null || string.IsNullOrWhiteSpace(DescriptionTextBox.Text) || StatusComboBox.SelectedItem == null || DatePicker.SelectedDate == null)
+            {
+                MessageBox.Show("All fields must be filled in.", "Validation Error", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
             NewItem = new DailyWorkItem
             {
                 NO = this.no,
@@ -79,7 +84,6 @@ namespace TM.DailyTrackR.View
                 TaskType = (TaskTypeEnum)TaskTypeComboBox.SelectedItem,
                 Description = DescriptionTextBox.Text,
                 Status = (StatusEnum)StatusComboBox.SelectedItem,
-                //Date = DatePicker.SelectedDate.Value
             };
 
             InsertNewItemIntoDatabase(NewItem,DatePicker.SelectedDate.Value);

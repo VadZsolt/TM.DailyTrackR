@@ -8,23 +8,31 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="down1.jpg" />
+    <None Remove="calendar.ico" />
     <None Remove="download.png" />
+    <None Remove="load.png" />
+    <None Remove="login.ico" />
+    <None Remove="new.ico" />
     <None Remove="plusicon.png" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Prism.Wpf" Version="8.1.97" />
+    <PackageReference Include="WpfAnimatedGif" Version="2.0.2" />
   </ItemGroup>
   
   <ItemGroup>
     <ProjectReference Include="..\TM.DailyTrackR.Common\TM.DailyTrackR.Common.csproj" />
     <ProjectReference Include="..\TM.DailyTrackR.DataType\TM.DailyTrackR.DataType.csproj" />
+    <ProjectReference Include="..\TM.DailyTrackR.ViewModel\TM.DailyTrackR.ViewModel.csproj" />
   </ItemGroup>
   
   <ItemGroup>
-    <Resource Include="down1.jpg" />
+    <Resource Include="calendar.ico" />
     <Resource Include="download.png" />
+    <Resource Include="load.png" />
+    <Resource Include="login.ico" />
+    <Resource Include="new.ico" />
     <Resource Include="plusicon.png" />
   </ItemGroup>
 

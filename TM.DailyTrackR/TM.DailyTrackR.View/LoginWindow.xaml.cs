@@ -26,10 +26,18 @@ namespace TM.DailyTrackR.View
         {
             string username = UsernameTextBox.Text;
             string password = PasswordBox.Password;
-
+            MainWindow mainWindow;
             if (ValidateUser(username, password))
             {
-                MainWindow mainWindow = new MainWindow(username);
+                if (Leader(username) == 1)
+                {
+                     mainWindow = new MainWindow(username,1);
+                }
+                else
+                {
+                    mainWindow = new MainWindow(username, 0);
+                }
+                
                 mainWindow.Show();
                 this.Close();
             }
@@ -71,6 +79,35 @@ namespace TM.DailyTrackR.View
             }
 
             return isValid;
+        }
+        private int Leader(string username)
+        {
+            int result = 0;
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+                    using (SqlCommand command = new SqlCommand("tm.IsLeader", connection))
+                    {
+                        command.CommandType = System.Data.CommandType.StoredProcedure;
+                        command.Parameters.AddWithValue("@Username", username);
+
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                result = reader.GetInt32(reader.GetOrdinal("isLeader"));
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"An error occurred: {ex.Message}");
+                }
+            }
+            return result;
         }
     }
 }

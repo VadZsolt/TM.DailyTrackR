@@ -56,3 +56,5 @@ C:\Users\User\source\repos\TM.DailyTrackR\TM.DailyTrackR\TM.DailyTrackR.View\obj
 C:\Users\User\source\repos\TM.DailyTrackR\TM.DailyTrackR\TM.DailyTrackR.View\obj\Debug\net8.0-windows\LoginWindow.baml
 C:\Users\User\source\repos\TM.DailyTrackR\TM.DailyTrackR\TM.DailyTrackR.View\obj\Debug\net8.0-windows\CreateWindow.g.cs
 C:\Users\User\source\repos\TM.DailyTrackR\TM.DailyTrackR\TM.DailyTrackR.View\obj\Debug\net8.0-windows\CreateWindow.baml
+C:\Users\User\source\repos\TM.DailyTrackR\TM.DailyTrackR\TM.DailyTrackR.View\bin\Debug\net8.0-windows\TM.DailyTrackR.ViewModel.dll
+C:\Users\User\source\repos\TM.DailyTrackR\TM.DailyTrackR\TM.DailyTrackR.View\bin\Debug\net8.0-windows\TM.DailyTrackR.ViewModel.pdb

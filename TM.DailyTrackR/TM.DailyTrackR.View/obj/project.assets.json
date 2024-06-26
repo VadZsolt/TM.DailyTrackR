@@ -196,6 +196,22 @@
           }
         }
       },
+      "WpfAnimatedGif/2.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.0/WpfAnimatedGif.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/WpfAnimatedGif.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WPF"
+        ]
+      },
       "TM.DailyTrackR.Common/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
@@ -243,6 +259,25 @@
         },
         "runtime": {
           "bin/placeholder/TM.DailyTrackR.Logic.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WPF"
+        ]
+      },
+      "TM.DailyTrackR.ViewModel/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Prism.Wpf": "8.1.97",
+          "TM.DailyTrackR.Common": "1.0.0",
+          "TM.DailyTrackR.DataType": "1.0.0",
+          "TM.DailyTrackR.Logic": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/TM.DailyTrackR.ViewModel.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TM.DailyTrackR.ViewModel.dll": {}
         },
         "frameworkReferences": [
           "Microsoft.WindowsDesktop.App.WPF"
@@ -641,6 +676,26 @@
         "version.txt"
       ]
     },
+    "WpfAnimatedGif/2.0.2": {
+      "sha512": "B0j9SqtThyHVTiOPvu6yR+39Te0g3o+7Jjb+qEm7+Iz1HRqbE5/4QV+ntHWOYYBPOUFr9x1mdzGl/EzWP+nKiA==",
+      "type": "package",
+      "path": "wpfanimatedgif/2.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net35/WpfAnimatedGif.dll",
+        "lib/net35/WpfAnimatedGif.pdb",
+        "lib/net35/WpfAnimatedGif.xml",
+        "lib/net40/WpfAnimatedGif.dll",
+        "lib/net40/WpfAnimatedGif.pdb",
+        "lib/net40/WpfAnimatedGif.xml",
+        "lib/netcoreapp3.0/WpfAnimatedGif.dll",
+        "lib/netcoreapp3.0/WpfAnimatedGif.pdb",
+        "lib/netcoreapp3.0/WpfAnimatedGif.xml",
+        "wpfanimatedgif.2.0.2.nupkg.sha512",
+        "wpfanimatedgif.nuspec"
+      ]
+    },
     "TM.DailyTrackR.Common/1.0.0": {
       "type": "project",
       "path": "../TM.DailyTrackR.Common/TM.DailyTrackR.Common.csproj",
@@ -655,13 +710,20 @@
       "type": "project",
       "path": "../TM.DailyTrackR.Logic/TM.DailyTrackR.Logic.csproj",
       "msbuildProject": "../TM.DailyTrackR.Logic/TM.DailyTrackR.Logic.csproj"
+    },
+    "TM.DailyTrackR.ViewModel/1.0.0": {
+      "type": "project",
+      "path": "../TM.DailyTrackR.ViewModel/TM.DailyTrackR.ViewModel.csproj",
+      "msbuildProject": "../TM.DailyTrackR.ViewModel/TM.DailyTrackR.ViewModel.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0-windows7.0": [
       "Prism.Wpf >= 8.1.97",
       "TM.DailyTrackR.Common >= 1.0.0",
-      "TM.DailyTrackR.DataType >= 1.0.0"
+      "TM.DailyTrackR.DataType >= 1.0.0",
+      "TM.DailyTrackR.ViewModel >= 1.0.0",
+      "WpfAnimatedGif >= 2.0.2"
     ]
   },
   "packageFolders": {
@@ -701,6 +763,9 @@
             },
             "C:\\Users\\User\\source\\repos\\TM.DailyTrackR\\TM.DailyTrackR\\TM.DailyTrackR.DataType\\TM.DailyTrackR.DataType.csproj": {
               "projectPath": "C:\\Users\\User\\source\\repos\\TM.DailyTrackR\\TM.DailyTrackR\\TM.DailyTrackR.DataType\\TM.DailyTrackR.DataType.csproj"
+            },
+            "C:\\Users\\User\\source\\repos\\TM.DailyTrackR\\TM.DailyTrackR\\TM.DailyTrackR.ViewModel\\TM.DailyTrackR.ViewModel.csproj": {
+              "projectPath": "C:\\Users\\User\\source\\repos\\TM.DailyTrackR\\TM.DailyTrackR\\TM.DailyTrackR.ViewModel\\TM.DailyTrackR.ViewModel.csproj"
             }
           }
         }
@@ -723,6 +788,10 @@
           "Prism.Wpf": {
             "target": "Package",
             "version": "[8.1.97, )"
+          },
+          "WpfAnimatedGif": {
+            "target": "Package",
+            "version": "[2.0.2, )"
           }
         },
         "imports": [

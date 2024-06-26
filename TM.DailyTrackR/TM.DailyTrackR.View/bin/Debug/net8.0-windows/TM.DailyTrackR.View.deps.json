@@ -10,7 +10,9 @@
         "dependencies": {
           "Prism.Wpf": "8.1.97",
           "TM.DailyTrackR.Common": "1.0.0",
-          "TM.DailyTrackR.DataType": "1.0.0"
+          "TM.DailyTrackR.DataType": "1.0.0",
+          "TM.DailyTrackR.ViewModel": "1.0.0",
+          "WpfAnimatedGif": "2.0.2"
         },
         "runtime": {
           "TM.DailyTrackR.View.dll": {}
@@ -119,6 +121,14 @@
         }
       },
       "System.Security.Principal.Windows/4.7.0": {},
+      "WpfAnimatedGif/2.0.2": {
+        "runtime": {
+          "lib/netcoreapp3.0/WpfAnimatedGif.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.2.0"
+          }
+        }
+      },
       "TM.DailyTrackR.Common/1.0.0": {
         "dependencies": {
           "Prism.Wpf": "8.1.97",
@@ -145,6 +155,17 @@
         },
         "runtime": {
           "TM.DailyTrackR.Logic.dll": {}
+        }
+      },
+      "TM.DailyTrackR.ViewModel/1.0.0": {
+        "dependencies": {
+          "Prism.Wpf": "8.1.97",
+          "TM.DailyTrackR.Common": "1.0.0",
+          "TM.DailyTrackR.DataType": "1.0.0",
+          "TM.DailyTrackR.Logic": "1.0.0"
+        },
+        "runtime": {
+          "TM.DailyTrackR.ViewModel.dll": {}
         }
       }
     }
@@ -239,6 +260,13 @@
       "path": "system.security.principal.windows/4.7.0",
       "hashPath": "system.security.principal.windows.4.7.0.nupkg.sha512"
     },
+    "WpfAnimatedGif/2.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-B0j9SqtThyHVTiOPvu6yR+39Te0g3o+7Jjb+qEm7+Iz1HRqbE5/4QV+ntHWOYYBPOUFr9x1mdzGl/EzWP+nKiA==",
+      "path": "wpfanimatedgif/2.0.2",
+      "hashPath": "wpfanimatedgif.2.0.2.nupkg.sha512"
+    },
     "TM.DailyTrackR.Common/1.0.0": {
       "type": "project",
       "serviceable": false,
@@ -250,6 +278,11 @@
       "sha512": ""
     },
     "TM.DailyTrackR.Logic/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TM.DailyTrackR.ViewModel/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

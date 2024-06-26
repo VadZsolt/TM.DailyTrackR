@@ -354,6 +354,9 @@
               },
               "C:\\Users\\User\\source\\repos\\TM.DailyTrackR\\TM.DailyTrackR\\TM.DailyTrackR.DataType\\TM.DailyTrackR.DataType.csproj": {
                 "projectPath": "C:\\Users\\User\\source\\repos\\TM.DailyTrackR\\TM.DailyTrackR\\TM.DailyTrackR.DataType\\TM.DailyTrackR.DataType.csproj"
+              },
+              "C:\\Users\\User\\source\\repos\\TM.DailyTrackR\\TM.DailyTrackR\\TM.DailyTrackR.ViewModel\\TM.DailyTrackR.ViewModel.csproj": {
+                "projectPath": "C:\\Users\\User\\source\\repos\\TM.DailyTrackR\\TM.DailyTrackR\\TM.DailyTrackR.ViewModel\\TM.DailyTrackR.ViewModel.csproj"
               }
             }
           }
@@ -376,6 +379,10 @@
             "Prism.Wpf": {
               "target": "Package",
               "version": "[8.1.97, )"
+            },
+            "WpfAnimatedGif": {
+              "target": "Package",
+              "version": "[2.0.2, )"
             }
           },
           "imports": [

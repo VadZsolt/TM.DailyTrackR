@@ -8,8 +8,8 @@ namespace TM.DailyTrackR.DataType.Enums
 {
     public enum TaskTypeEnum
     {
-        New = 0,
-        Fix = 1,
+        New = 1,
+        Fix = 2,
     }
 
     public enum StatusEnum

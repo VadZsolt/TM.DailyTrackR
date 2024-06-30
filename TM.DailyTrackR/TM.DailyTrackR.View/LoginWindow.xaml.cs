@@ -24,6 +24,7 @@ namespace TM.DailyTrackR.View
         }
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
+            //saves user and pass, and validates it
             string username = UsernameTextBox.Text;
             string password = PasswordBox.Password;
             MainWindow mainWindow;
@@ -49,6 +50,7 @@ namespace TM.DailyTrackR.View
 
         private bool ValidateUser(string username, string password)
         {
+            //validation, user and password are correct
             bool isValid = false;
 
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -82,6 +84,7 @@ namespace TM.DailyTrackR.View
         }
         private int Leader(string username)
         {
+            //checks if logged in user is leader or not
             int result = 0;
             using (SqlConnection connection = new SqlConnection(connectionString))
             {

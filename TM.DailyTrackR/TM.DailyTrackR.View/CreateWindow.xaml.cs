@@ -38,12 +38,14 @@ namespace TM.DailyTrackR.View
 
         private void LoadEnumValues()
         {
+            //converting values with enum
             TaskTypeComboBox.ItemsSource = Enum.GetValues(typeof(TaskTypeEnum));
             StatusComboBox.ItemsSource = Enum.GetValues(typeof(StatusEnum));
         }
 
         private void LoadProjectTypes()
         {
+            //project types to select
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 try
@@ -72,6 +74,7 @@ namespace TM.DailyTrackR.View
 
         private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
+            //if everything is filled can be saved
             if (ProjectTypeComboBox.SelectedItem == null || TaskTypeComboBox.SelectedItem == null || string.IsNullOrWhiteSpace(DescriptionTextBox.Text) || StatusComboBox.SelectedItem == null || DatePicker.SelectedDate == null)
             {
                 MessageBox.Show("All fields must be filled in.", "Validation Error", MessageBoxButton.OK, MessageBoxImage.Warning);
@@ -95,6 +98,7 @@ namespace TM.DailyTrackR.View
 
         private void InsertNewItemIntoDatabase(DailyWorkItem item, DateTime date)
         {
+            //inserting new item to databse
             int ProjectId=-1;
             object result;
             using (SqlConnection connection = new SqlConnection(connectionString))

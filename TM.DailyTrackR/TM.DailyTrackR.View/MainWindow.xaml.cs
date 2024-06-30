@@ -23,6 +23,7 @@
         public ICommand DeleteDailyWorkItemCommand { get; }
         public MainWindow(string username,int isLeader)
         {
+            //creates mainwindows properties by the logins data
             InitializeComponent();
             this.userName = username;
             this.isLeader = isLeader;
@@ -45,14 +46,17 @@
         }
         private void ExecuteCreateMenuItem(object parameter)
         {
+            //shortcut for ctrl+n
             CreateMenuItem_Click(this, null);
         }
         private bool CanExecuteDeleteDailyWorkItem(object parameter)
         {
+            //shortcut for delete shortcut
             return DailyWorkDataGrid.SelectedItem != null;
         }
         private void Window_KeyDown(object sender, KeyEventArgs e)
         {
+            //checks keydowns for shortcuts
             if (e.Key == Key.N && (Keyboard.Modifiers & ModifierKeys.Control) == ModifierKeys.Control)
             {
                 ExecuteCreateMenuItem(null);
@@ -64,20 +68,22 @@
         }
         private void Calendar_Loaded(object sender, RoutedEventArgs e)
         {
+            //calendats default day is today
             Calendar.SelectedDate = DateTime.Today;
         }
         private void ExecuteDeleteDailyWorkItem(object parameter)
         {
+            //delete from grid
             if (DailyWorkDataGrid.SelectedItem is DailyWorkItem selectedItem)
             {
                 DeleteDailyWorkItemFromDatabase(selectedItem);
-                // Remove the item from the grid's source (assuming it's an ObservableCollection or similar)
                 (DailyWorkDataGrid.ItemsSource as IList<DailyWorkItem>)?.Remove(selectedItem);
             }
         }
 
         private async void LoadDataByDate(DateTime date)
         {
+            //getting the data for overview tab
             string procedureName = "tm.GetActivitiesByDate";
             no = 0;
             List<OverviewItem> overviewItems = new List<OverviewItem>();
@@ -89,7 +95,6 @@
             {
                 try
                 {
-                    await Task.Delay(500);
                     using (SqlCommand command = new SqlCommand(procedureName, connection))
                     {
                         command.CommandType = CommandType.StoredProcedure;
@@ -118,16 +123,18 @@
                 }
                 finally
                 {
+                    await Task.Delay(500);
                     LoadingIndicator.Visibility = Visibility.Collapsed;
                     OverviewDataGrid.ItemsSource = overviewItems;
                     OverviewDataGrid.Visibility = Visibility.Visible;
+                    
                 }
             }
         }
 
         private void LoadDailyWorkData(string username, DateTime date)
         {
-
+            //getting data for dailywork tab
             string procedureName = "tm.GetActivitiesUserDate";
             List<DailyWorkItem> dailyWorkItems = new List<DailyWorkItem>();
             no = 0;
@@ -169,6 +176,7 @@
         }
         private void Calendar_SelectedDatesChanged(object sender, SelectionChangedEventArgs e)
         {
+            //eventhandler for changed date in calendar
             if (Calendar.SelectedDate.HasValue)
             {
                 formattedDate = new DateTime(Calendar.SelectedDate.Value.Year, Calendar.SelectedDate.Value.Month, Calendar.SelectedDate.Value.Day);
@@ -180,6 +188,7 @@
         }
         private void DailyWorkDataGrid_MouseRightButtonUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
+            //contextmanu for daily grid
             DataGrid dataGrid = sender as DataGrid;
             if (dataGrid != null)
             {
@@ -188,16 +197,19 @@
         }
         private void CreateMenuItem_Click(object sender, RoutedEventArgs e)
         {
+            //create activity option in contextMenu
             CreateWindow createWindow = new CreateWindow(userName, no);
-            createWindow.ItemInserted += CreateWindow_ItemInserted; // Subscribe to the event
+            createWindow.ItemInserted += CreateWindow_ItemInserted;
             createWindow.ShowDialog();
         }
         private void CreateWindow_ItemInserted(object sender, EventArgs e)
         {
-            LoadDailyWorkData(userName, formattedDate); // Refresh the data grid
+            //after insert refresh the tab
+            LoadDailyWorkData(userName, formattedDate);
         }
         private void DeleteMenuItem_Click(object sender, RoutedEventArgs e)
         {
+            //contextmenu delete
             if (DailyWorkDataGrid.SelectedItem != null)
             {
                 var result = MessageBox.Show("Are you sure you want to delete the selected item?", "Confirmation", MessageBoxButton.YesNo);
@@ -223,6 +235,7 @@
         }
         private void DeleteDailyWorkItemFromDatabase(DailyWorkItem item)
         {
+            //delete activity from database
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 try
@@ -250,22 +263,21 @@
 
             if (startDate.HasValue && endDate.HasValue)
             {
-                // Call method to fetch and export data for the selected date range
+                //Getting the data between dates
                 List<OverviewItem> filteredData = FetchDataForExport(startDate.Value, endDate.Value);
                 if (filteredData.FirstOrDefault() == null)
                 {
                     MessageBox.Show("No activities"); return;
                 }
-                // Format the data for export
                 StringBuilder exportText = new StringBuilder();
 
-                // Center the first line
+                // Centering title
                 string header = $"Team Activity in the period {startDate.Value.ToString("dd.MM.yyyy")} – {endDate.Value.ToString("dd.MM.yyyy")}";
-                int consoleWidth = 80; // Assuming a console width of 80 characters
+                int consoleWidth = 80;
                 int spaces = (consoleWidth - header.Length) / 2;
                 exportText.AppendLine(header.PadLeft(spaces + header.Length));
 
-                // Group data by ProjectType and create the export text
+                // Grouping data
                 var groupedData = filteredData.GroupBy(item => item.ProjectType);
                 foreach (var group in groupedData)
                 {
@@ -349,6 +361,7 @@
         }
         private void DailyWorkDataGrid_CellEditEnding(object sender, DataGridCellEditEndingEventArgs e)
         {
+            //cell editing for dailywork, only for description
             if (e.EditAction == DataGridEditAction.Commit)
             {
                 if (e.Column.Header.ToString() == "Description")
@@ -370,6 +383,7 @@
 
         private void UpdateDescriptionInDatabase(int id, string newDescription)
         {
+            //saving the edited data
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 try
